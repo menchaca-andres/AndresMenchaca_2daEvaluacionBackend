@@ -1,0 +1,34 @@
+enum UserRole {
+  ADMIN
+  CURADOR
+  INVESTIGADOR
+  VISITANTE
+}
+
+type User {
+  id: ID!
+  email: String!
+  nombre: String
+  biografia: String
+  role: UserRole!
+  two_factor_enabled: Boolean!
+  last_login: String
+}
+
+type AuthResponse {
+  accessToken: String
+  refreshToken: String
+  user: User
+  requires2FA: Boolean
+  tempToken: String
+  message: String
+}
+
+type Query {
+  users: [User!]!
+}
+
+type Mutation {
+  login(email: String!, password: String!): AuthResponse!
+  verify2FA(token: String!, tempToken: String!): AuthResponse!
+}
