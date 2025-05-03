@@ -1,0 +1,38 @@
+{
+  "name": "andresmenchaca_2daevaluacionbackend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "build": "tsc",
+    "dev": "ts-node src/server.ts",
+    "watch": "nodemon src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/menchaca-andres/AndresMenchaca_2daEvaluacionBackend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/menchaca-andres/AndresMenchaca_2daEvaluacionBackend/issues"
+  },
+  "homepage": "https://github.com/menchaca-andres/AndresMenchaca_2daEvaluacionBackend#readme",
+  "dependencies": {
+    "@graphql-tools/schema": "^10.0.23",
+    "axios": "^1.9.0",
+    "dotenv": "^16.5.0",
+    "graphql": "^16.11.0",
+    "graphql-tag": "^2.12.6",
+    "graphql-yoga": "^5.13.4"
+  },
+  "devDependencies": {
+    "@graphql-typed-document-node/core": "^3.2.0",
+    "@types/graphql": "^14.2.3",
+    "@types/node": "^22.15.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
