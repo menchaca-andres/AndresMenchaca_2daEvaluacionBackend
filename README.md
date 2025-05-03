@@ -25,6 +25,9 @@ npm install
 # O si prefieres instalar las dependencias principales manualmente:
 npm install graphql graphql-yoga @graphql-tools/schema axios dotenv
 npm install -D typescript ts-node @types/node @types/graphql
+````
+
+## Crear un archivo .env
 
 ```env
 PORT=4001
