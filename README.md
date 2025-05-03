@@ -2,12 +2,12 @@
 
 Microservicio GraphQL que permite a los administradores de la página web de Testimonios consultar usuarios desde la API auth, manejando la autenticación, verificación en dos factores y consultas a través de este endpoint.
 
-## Requisitos Previos
+## Requisitos previos
 
 - Node.js (versión 18 o superior)
 - npm (incluido con Node.js)
 
-## Configuración del Entorno
+## Configuración del entorno
 
 1. Clona el repositorio:
 
@@ -35,28 +35,28 @@ API_URL=http://localhost:4000
 JWT_SECRET=microservicio-secret-key
 ````
 
-## Estructura del Proyecto
+## Estructura del proyecto
 
 ```
 ├── src/
-│   ├── apiClient.ts     # Cliente Axios para comunicación con API REST
+│   ├── apiClient.ts     # Cliente axios para comunicación con API REST
 │   ├── config.ts        # Configuración del servidor
 │   ├── resolvers.ts     # Resolvers de GraphQL
 │   ├── schema.graphql   # Schema de GraphQL
 │   ├── server.ts        # Configuración del servidor GraphQL
-│   └── types/          # Definiciones de tipos TypeScript
+│   └── types/          # Definiciones de tipos typeScript
 |       └── graphql.d.ts
 ├── .env                # Variables de entorno
 ├── package.json        # Dependencias y scripts
-└── tsconfig.json      # Configuración de TypeScript
+└── tsconfig.json      # Configuración de typeScript
 ```
 
-## Scripts Disponibles
+## Scripts disponibles
 
-- `npm run dev`: Inicia el servidor en modo desarrollo con ts-node
-- `npm run build`: Compila el código TypeScript
-- `npm start`: Inicia el servidor en modo producción
-- `npm run watch`: Inicia el servidor en modo desarrollo con nodemon
+- `npm run dev`
+- `npm run build`
+- `npm start`
+- `npm run watch`
 
 ## Endpoints GraphQL
 
@@ -81,7 +81,7 @@ npm run dev
 
 3. Accede a GraphQL en `http://localhost:4001/graphql` en Potsman con la petición POST para los tres endpoints.
 
-## Ejemplo de Uso
+## Ejemplo de uso
 
 ### Login
 
@@ -118,7 +118,7 @@ mutation {
 }
 ```
 
-### Consulta de Usuarios
+### Consulta de usuarios
 
 ```graphql
 query {
@@ -131,13 +131,13 @@ query {
 }
 ```
 
-Nota: Para la consulta de usuarios, incluye el token JWT en los headers:
+Nota: Para la consulta de usuarios, incluir el token JWT en los headers:
 
 ```txt
   Authorization   Bearer tu_token
 ```
 
-## Notas Importantes
+## Notas importantes
 
 - El servidor GraphQL corre en el puerto 4001 por defecto
 - Se requiere que el servicio API REST esté corriendo en el puerto 4000
